@@ -23,6 +23,8 @@ MonoBehaviour:
     - exit
     - play
     - keyboard
+    - language
+    - master_volume
     _values:
     - Settings
     - Gameplay
@@ -33,3 +35,5 @@ MonoBehaviour:
     - Exit
     - Play Game
     - Keyboard
+    - Language
+    - Master Volume

@@ -10,14 +10,14 @@ namespace GameFolder.Data
     {
         public const string NAME = "local_data_app_settings";
 
-        [JsonProperty] private float masterMusicVolume = 1f;
+        [JsonProperty] private float masterVolume = 1f;
         [JsonProperty] private LanguageType languageType;
 
         [JsonIgnore]
-        public float MasterMusicVolume
+        public float MasterVolume
         {
-            get => masterMusicVolume;
-            set => masterMusicVolume = value;
+            get => masterVolume;
+            set => masterVolume = value;
         }
 
         [JsonIgnore]
@@ -30,7 +30,7 @@ namespace GameFolder.Data
         public override void OnGenerate()
         {
             base.OnGenerate();
-            masterMusicVolume = 1;
+            masterVolume = 0.7f;
             languageType = LocalizationLoader.FromSystemLanguage(Application.systemLanguage);
         }
     }
