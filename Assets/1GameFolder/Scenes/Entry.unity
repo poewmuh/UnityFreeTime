@@ -429,6 +429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1239570159}
   - component: {fileID: 1239570160}
+  - component: {fileID: 1239570161}
   m_Layer: 0
   m_Name: Boot
   m_TagString: Untagged
@@ -464,6 +465,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _customLoadDelay: 2
+--- !u!114 &1239570161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239570158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 765a5f5e64057804dad159bf3596cd01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1815088420
 GameObject:
   m_ObjectHideFlags: 0

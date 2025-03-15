@@ -1,5 +1,5 @@
+using GameFolder.Tools.DataControl;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,13 +18,22 @@ namespace GameFolder.UI.Windows
                 Debug.Log("[WindowsManager] Window already open");
                 return null;
             }
+            CloseAllWindows();
             var loadHandler = new AssetLoaderHandler();
-            var windowObject = loadHandler.LoadImmediate<T>(path);
+            var windowObject = loadHandler.LoadGOImmediate<T>(path);
             var window = GameObject.Instantiate(windowObject, parent);
             window.onWindowClose += OnWindowClose;
             _windowAssets.Add(window, loadHandler);
             _openedWindows.Add(typeof(T));
             return window;
+        }
+
+        private static void CloseAllWindows()
+        {
+            foreach (var window in _windowAssets.Keys)
+            {
+                window.Close();
+            }
         }
 
         private static void OnWindowClose(WindowBase window)

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace GameFolder.UI.Tools
+namespace GameFolder.Tools.UI
 {
     [ExecuteInEditMode]
     [AddComponentMenu("UI/RoundedRect")]

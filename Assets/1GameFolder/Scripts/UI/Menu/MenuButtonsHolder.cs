@@ -1,3 +1,4 @@
+using GameFolder.UI.Menu.Settings;
 using GameFolder.UI.Windows;
 using UnityEngine;
 
