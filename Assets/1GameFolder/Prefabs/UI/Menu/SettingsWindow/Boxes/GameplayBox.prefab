@@ -61,19 +61,19 @@ PrefabInstance:
     - target: {fileID: 310599779740793007, guid: 8dce53f5ce7ca444db469b38aca70b2d,
         type: 3}
       propertyPath: m_fontSize
-      value: 67.1
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 310599779740793007, guid: 8dce53f5ce7ca444db469b38aca70b2d,
         type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 5b4651e45f8581d49895ee2510f31005,
+      objectReference: {fileID: 11400000, guid: eb337547c8a8ff74b90312cec40d15c3,
         type: 2}
     - target: {fileID: 310599779740793007, guid: 8dce53f5ce7ca444db469b38aca70b2d,
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 21631041359022638, guid: 5b4651e45f8581d49895ee2510f31005,
+      objectReference: {fileID: 21631041359022638, guid: eb337547c8a8ff74b90312cec40d15c3,
         type: 2}
     - target: {fileID: 310599779740793007, guid: 8dce53f5ce7ca444db469b38aca70b2d,
         type: 3}
@@ -89,6 +89,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TextStyleHashCode
       value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 310599779740793007, guid: 8dce53f5ce7ca444db469b38aca70b2d,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310599779740793007, guid: 8dce53f5ce7ca444db469b38aca70b2d,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 598172486176219718, guid: 8dce53f5ce7ca444db469b38aca70b2d,
         type: 3}

@@ -25,15 +25,17 @@ MonoBehaviour:
     - keyboard
     - language
     - master_volume
+    - tap_any
     _values:
     - Settings
     - Gameplay
     - Audio
     - Gamepad
-    - Video
+    - Graphics
     - Close
     - Exit
-    - Play Game
+    - Start game
     - Keyboard
     - Language
     - Master Volume
+    - tap any button
