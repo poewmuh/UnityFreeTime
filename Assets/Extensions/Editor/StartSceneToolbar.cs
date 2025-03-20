@@ -15,7 +15,7 @@ namespace Extensions
         {
             get
             {
-                const string path = globalScenesPath + "Entry.unity";
+                const string path = globalScenesPath + "Boot.unity";
                 return AssetDatabase.LoadAssetAtPath<SceneAsset>(path);
             }
         }
