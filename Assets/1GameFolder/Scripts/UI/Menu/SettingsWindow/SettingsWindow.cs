@@ -1,6 +1,7 @@
 using GameFolder.Tools.Serialization;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -11,19 +12,27 @@ namespace GameFolder.UI.Menu.Settings
         public const string assetPath = "UI/Menu/SettingsWindow";
 
         [SerializeField] private DictionaryIntGameObject _tabs;
+        [SerializeField] private List<TextMeshProUGUI> _tabsText;
 
-        public void OnChangeTabPressed(int tabId)
+        private int _focusableTabId = -1;
+
+        public override void OnCreated()
         {
-            CloseAllTabs();
-            _tabs[tabId].SetActive(true);
+            base.OnCreated();
+            SetFocusableTab(0);
         }
 
-        private void CloseAllTabs()
+        public void SetFocusableTab(int tabId)
         {
-            foreach (var tab in _tabs.Values)
+            if (_focusableTabId >= 0)
             {
-                tab.SetActive(false);
+                _tabs[_focusableTabId].SetActive(false);
+                _tabsText[_focusableTabId].color = ColorsHelper.settingsTabTextColor;
             }
+
+            _focusableTabId = tabId;
+            _tabsText[_focusableTabId].color = ColorsHelper.textHighlightedColor;
+            _tabs[_focusableTabId].SetActive(true);
         }
     }
 }

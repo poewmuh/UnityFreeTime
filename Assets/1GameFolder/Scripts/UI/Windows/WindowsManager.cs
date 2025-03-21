@@ -8,6 +8,8 @@ namespace GameFolder.UI.Windows
     public class WindowsManager
     {
         public static event Action<WindowBase> OnWindowOpen;
+        public static event Action<WindowBase> OnWindowStartClose;
+        
         private static List<Type> _openedWindows = new();
         private static Dictionary<WindowBase, AssetLoaderHandler> _windowAssets = new();
 
@@ -23,8 +25,11 @@ namespace GameFolder.UI.Windows
             var windowObject = loadHandler.LoadGOImmediate<T>(path);
             var window = GameObject.Instantiate(windowObject, parent);
             window.onWindowClose += OnWindowClose;
+            window.onStartClose += OnStartClose;
             _windowAssets.Add(window, loadHandler);
             _openedWindows.Add(typeof(T));
+            window.OnCreated();
+            OnWindowOpen?.Invoke(window);
             return window;
         }
 
@@ -42,6 +47,12 @@ namespace GameFolder.UI.Windows
             _windowAssets[window].Unload();
             _windowAssets.Remove(window);
             _openedWindows.Remove(window.GetType());
+        }
+
+        private static void OnStartClose(WindowBase window)
+        {
+            window.onStartClose -= OnStartClose;
+            OnWindowStartClose?.Invoke(window);
         }
     }
 }

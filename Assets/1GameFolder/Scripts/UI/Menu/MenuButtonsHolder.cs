@@ -13,7 +13,11 @@ namespace GameFolder.UI.Menu
 
         public void OnClickSettings()
         {
-            WindowsManager.CreateWindow<SettingsWindow>(SettingsWindow.assetPath, transform.parent);
+            var settingsWindow = WindowsManager.CreateWindow<SettingsWindow>(SettingsWindow.assetPath, transform.parent);
+            if (settingsWindow)
+            {
+                settingsWindow.Show();
+            }
         }
 
         public void OnClickExit()
