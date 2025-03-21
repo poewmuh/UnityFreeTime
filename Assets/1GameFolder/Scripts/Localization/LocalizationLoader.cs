@@ -10,7 +10,8 @@ namespace GameFolder.Localization
     public enum LanguageType
     {
         Rus = 0,
-        Eng = 1
+        Eng = 1,
+        EmptyMax = 2
     }
 
     public class LocalizationLoader

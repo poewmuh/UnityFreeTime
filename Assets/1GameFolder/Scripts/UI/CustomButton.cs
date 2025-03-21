@@ -22,12 +22,19 @@ namespace GameFolder.UI
         public override void OnSelect(BaseEventData eventData)
         {
             base.OnSelect(eventData);
-            _text.fontStyle |= FontStyles.Underline;
+            if (_text)
+            {
+                _text.fontStyle |= FontStyles.Underline;
+            }
         }
 
         public override void OnDeselect(BaseEventData eventData)
         {
-            _text.fontStyle &= ~FontStyles.Underline;
+            base.OnDeselect(eventData);
+            if (_text)
+            {
+                _text.fontStyle &= ~FontStyles.Underline;
+            }
         }
 
         public void OnPointerClick(PointerEventData eventData)

@@ -52,6 +52,10 @@ namespace GameFolder.Audio
 
         private float GetDBFromValue(float volume)
         {
+            if (volume.ApproxZero())
+            {
+                return -80f;
+            }
             return Mathf.Lerp(MINIMAL_VOLUME, MAXIMAL_VOLUME, volume);
         }
     }

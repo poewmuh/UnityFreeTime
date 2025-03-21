@@ -19,13 +19,30 @@ namespace GameFolder.UI.Menu.Settings
             _languageDropDown.value = (int)_appSettings.LanguageType;
         }
 
-        public void OnChangeLanguage(int languageId)
+        public void OnChangeLanguage(bool isArrowRight)
         {
-            var newLanguageType = (LanguageType)languageId;
-            if (_appSettings.LanguageType == newLanguageType) return;
-            _appSettings.LanguageType = newLanguageType;
+            int currentLanguageInt = (int)_appSettings.LanguageType;
+            if (isArrowRight)
+            {
+                currentLanguageInt++;
+                if (currentLanguageInt >= (int)LanguageType.EmptyMax)
+                {
+                    currentLanguageInt = 0;
+                }
+            }
+            else
+            {
+                currentLanguageInt--;
+                if (currentLanguageInt < 0)
+                {
+                    currentLanguageInt = (int)LanguageType.EmptyMax - 1;
+                }
+            }
+
+            _languageDropDown.value = currentLanguageInt;
+            _appSettings.LanguageType = (LanguageType)currentLanguageInt;
             _appSettings.Save();
-            LocalizationLoader.LoadLocalization((LanguageType)languageId);
+            LocalizationLoader.LoadLocalization((LanguageType)currentLanguageInt);
         }
     }
 }
