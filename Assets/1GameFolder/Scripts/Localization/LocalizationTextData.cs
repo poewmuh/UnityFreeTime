@@ -12,7 +12,7 @@ namespace GameFolder.Localization
         {
             if (!_localizationDic.ContainsKey(key))
             {
-                Debug.LogError($"Key {key} didn't exist in dictionary!");
+                Debug.LogError($"Key '{key}' didn't exist in dictionary!");
                 return "Error Check Localization!";
             }
 

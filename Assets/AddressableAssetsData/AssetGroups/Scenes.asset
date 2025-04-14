@@ -13,16 +13,22 @@ MonoBehaviour:
   m_Name: Scenes
   m_EditorClassIdentifier: 
   m_GroupName: Scenes
-  m_Data:
-    m_SerializedData: []
   m_GUID: 9ce647f602e952848b0d267a04a051d0
   m_SerializeEntries:
   - m_GUID: 9b0f9bdfe5401fa4ca9e0682746e5498
     m_Address: MainMenu
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bb5ba123634540e409d785a5ee79ff8e
+    m_Address: HubLocation
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 78e52be00fe848f40bc394287923592f, type: 2}
   m_SchemaSet:
-    m_Schemas: []
+    m_Schemas:
+    - {fileID: 11400000, guid: 5d340398e7deca84d90db1137f5bf3b8, type: 2}

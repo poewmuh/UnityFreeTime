@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: MainMenu
   m_EditorClassIdentifier: 
   m_GroupName: MainMenu
-  m_Data:
-    m_SerializedData: []
   m_GUID: 729c85210fe0c434e9e87f3910bc0fb3
   m_SerializeEntries:
   - m_GUID: 1a60bee54d642d04db20bfbcd6a0ad5b
     m_Address: UI/Menu/SettingsWindow
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 78e52be00fe848f40bc394287923592f, type: 2}
   m_SchemaSet:
-    m_Schemas: []
+    m_Schemas:
+    - {fileID: 11400000, guid: 5adc751d450d02c448bbdbeecffecc8d, type: 2}

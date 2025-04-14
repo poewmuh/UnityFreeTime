@@ -619,7 +619,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotateSpeed: 0.01
-  _rotateOnAwake: 1
   _rotateVector: {x: 0, y: 0, z: 1}
 --- !u!1 &8878876037597092024
 GameObject:
@@ -710,7 +709,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotateSpeed: 0.01
-  _rotateOnAwake: 1
   _rotateVector: {x: 0, y: 0, z: -1}
 --- !u!1 &8942317414975619008
 GameObject:
@@ -2634,7 +2632,7 @@ PrefabInstance:
     - target: {fileID: 4801980090098745347, guid: f288fb63d30f3fa449919d6d53876a46,
         type: 3}
       propertyPath: m_text
-      value: Close
+      value: back
       objectReference: {fileID: 0}
     - target: {fileID: 4801980090098745347, guid: f288fb63d30f3fa449919d6d53876a46,
         type: 3}
@@ -2649,7 +2647,7 @@ PrefabInstance:
     - target: {fileID: 7344169833675879546, guid: f288fb63d30f3fa449919d6d53876a46,
         type: 3}
       propertyPath: _key
-      value: close
+      value: back
       objectReference: {fileID: 0}
     - target: {fileID: 7397238378378466352, guid: f288fb63d30f3fa449919d6d53876a46,
         type: 3}

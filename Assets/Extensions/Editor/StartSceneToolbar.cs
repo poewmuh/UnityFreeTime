@@ -10,6 +10,9 @@ namespace Extensions
     {
         private const string globalScenesPath = "Assets/1GameFolder/Scenes/";
         private const string menuScenePath = globalScenesPath + "MainMenu.unity";
+        private const string bootScenePath = globalScenesPath + "Boot.unity";
+        private const string hubScenePath = globalScenesPath + "HubLocation.unity";
+        private const string battleScenePath = globalScenesPath + "BattleLocation.unity";
 
         private static SceneAsset startScene
         {
@@ -31,7 +34,7 @@ namespace Extensions
         private static void OnToolbarGUI()
         {
             GUILayout.FlexibleSpace();
-            if (GUILayout.Button(new GUIContent($"{startScene.name}", $"Start {startScene.name} Scene"),
+            if (GUILayout.Button(new GUIContent($"Play {startScene.name}", $"Start {startScene.name} Scene"),
                     EditorStyles.toolbarButton))
             {
                 EditorSceneManager.playModeStartScene = startScene;
@@ -42,6 +45,24 @@ namespace Extensions
                     EditorStyles.toolbarButton))
             {
                 EditorSceneManager.OpenScene(menuScenePath);
+            }
+            
+            if (GUILayout.Button(new GUIContent($"BootScene"),
+                    EditorStyles.toolbarButton))
+            {
+                EditorSceneManager.OpenScene(bootScenePath);
+            }
+            
+            if (GUILayout.Button(new GUIContent($"HubLocation"),
+                    EditorStyles.toolbarButton))
+            {
+                EditorSceneManager.OpenScene(hubScenePath);
+            }
+            
+            if (GUILayout.Button(new GUIContent($"BattleLocation"),
+                    EditorStyles.toolbarButton))
+            {
+                EditorSceneManager.OpenScene(battleScenePath);
             }
         }
 
